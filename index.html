@@ -3,63 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prank Page - Disturbing Maanshree!</title>
+  <title>Professional Prank</title>
   <style>
+    * {
+      margin: 5;
+      padding: 5;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #f8c9d2;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Georgia', serif;
+      background-color: #f0e6d6;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #5e503f;
+      overflow: hidden;
+    }
+
+    .container {
       text-align: center;
-      padding: 50px;
+      padding: 40px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: perspective(1000px);
+      position: relative;
+      width: 80%;
+      max-width: 500px;
+      border: 2px solid #bc8a4d;
     }
-    h1 {
-      font-size: 4rem;
-      color: #ff007f;
-      animation: pulse 2s infinite;
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4f4b44;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
     }
-    .emoji {
-      font-size: 3rem;
-      animation: shake 1s infinite;
+
+    .intro {
+      font-size: 1.2rem;
+      color: #6c4f3d;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.5;
     }
+
+    .gif {
+      width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .button {
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      background: #bc8a4d;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #a67c52;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .button:focus {
+      outline: none;
+    }
+
     .message {
       font-size: 1.5rem;
-      color: #5d3f6a;
+      color: #5e503f;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
       margin-top: 20px;
-      font-weight: bold;
+      font-weight: 600;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      line-height: 1.4;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    .message.show {
+      opacity: 1;
     }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-10px); }
-      50% { transform: translateX(10px); }
-      75% { transform: translateX(-10px); }
+
+    /* Responsive Design for Android */
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .container {
+        padding: 20px;
+        width: 100%;
+      }
+
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      .gif {
+        width: 150px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>I WANT TO DISTURB YOU, MAANSHREE 😝</h1>
-  <div class="emoji">🤪🎉💥</div>
-  <div class="message">You're the best, but now you're getting pranked!</div>
+
+  <div class="container">
+    <div class="title">Welcome to the website made by professional Alok Sir 🤓</div>
+    <div class="intro">
+      This is a <b>serious</b> website with a <b>serious</b> mission 😎.<br>Click below to see the surprise! 🎉
+    </div>
+
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzNqcWExMGZyOHZ2Zm8ybTJjMHl2OWtnaDl4dGc1dGdlZXE5aHRyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUPGcyi4YxcZp8dWZq/giphy.gif" alt="Serious" class="gif">
+
+    <button class="button" onclick="showMessage()">Look into me 👀</button>
+
+    <div class="message" id="message">I wanted to disturb you Manashree .</div>
+
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnBmM2dmZG5nbWtvNnR5bXoxNGJnYnJneXVzMzg0bW0xdmVyMHN2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aC45M5Q4D07Pq/giphy.gif" alt="Funny Reaction" class="gif">
+  </div>
 
   <script>
-    // Fun alert every 5 seconds
-    setInterval(function() {
-      alert("Hey Maanshree! Disturbing you more... 🤪");
-    }, 5000);
-
-    // Fun fact alert every 15 seconds
-    setInterval(function() {
-      alert("Did you know? You're amazing, but this prank will never end! 🤣");
-    }, 15000);
-
-    // Pop a new emoji every 3 seconds
-    let emojis = ["🤪", "🎉", "😜", "💥", "😂", "😝"];
-    setInterval(function() {
-      document.querySelector('.emoji').innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
-    }, 3000);
+    function showMessage() {
+      var message = document.getElementById('message');
+      message.classList.add('show');
+    }
   </script>
+
 </body>
 </html>
