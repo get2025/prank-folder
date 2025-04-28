@@ -2,26 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hey Manashreelayek!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prank Page - Disturbing Maanshree!</title>
   <style>
     body {
-      background-color: pink;
+      background-color: #f8c9d2;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      margin-top: 100px;
-      font-family: 'Comic Sans MS', cursive;
+      padding: 50px;
     }
     h1 {
-      font-size: 50px;
-      color: purple;
+      font-size: 4rem;
+      color: #ff007f;
+      animation: pulse 2s infinite;
+    }
+    .emoji {
+      font-size: 3rem;
+      animation: shake 1s infinite;
+    }
+    .message {
+      font-size: 1.5rem;
+      color: #5d3f6a;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
     }
   </style>
 </head>
 <body>
-  <h1>I WANT TO DISTURB YOU, MANASHREE  😝❤️</h1>
+  <h1>I WANT TO DISTURB YOU, MAANSHREE 😝</h1>
+  <div class="emoji">🤪🎉💥</div>
+  <div class="message">You're the best, but now you're getting pranked!</div>
+
   <script>
+    // Fun alert every 5 seconds
     setInterval(function() {
-      alert("Hey Manashree! Disturbing you 🤪!");
-    }, 5000); // Every 5 seconds
+      alert("Hey Maanshree! Disturbing you more... 🤪");
+    }, 5000);
+
+    // Fun fact alert every 15 seconds
+    setInterval(function() {
+      alert("Did you know? You're amazing, but this prank will never end! 🤣");
+    }, 15000);
+
+    // Pop a new emoji every 3 seconds
+    let emojis = ["🤪", "🎉", "😜", "💥", "😂", "😝"];
+    setInterval(function() {
+      document.querySelector('.emoji').innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+    }, 3000);
   </script>
 </body>
 </html>
